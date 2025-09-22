@@ -30,6 +30,26 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        .service-link {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        .service-link:hover {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        .service-link:visited {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        .service-link:focus {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,19 +73,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="#" class="nav-item nav-link active">Home</a>
-                <a href="#" class="nav-item nav-link">About</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Crowns & Bridges</a>
-                        <a href="feature.html" class="dropdown-item">Implant-Supported Prosthesis</a>
-                        <a href="feature.html" class="dropdown-item">Custom Abutments</a>
-                        <a href="feature.html" class="dropdown-item">Orthodontic & TMJ Appliances</a>
-                        <a href="feature.html" class="dropdown-item">Surgical & Diagnostic Tools</a>
-                        <a href="feature.html" class="dropdown-item">Aesthetic & Trial Aids</a>
-                        <a href="feature.html" class="dropdown-item">Case Planning Assistance</a>
-                        <a href="feature.html" class="dropdown-item">Hybrid Denture Solutions</a>
+                        <a href="service-details.html?service=crowns-bridges" class="dropdown-item">Crowns & Bridges</a>
+                        <a href="service-details.html?service=implant-prosthesis" class="dropdown-item">Implant-Supported Prosthesis</a>
+                        <a href="service-details.html?service=custom-abutments" class="dropdown-item">Custom Abutments</a>
+                        <a href="service-details.html?service=orthodontic-tmj" class="dropdown-item">Orthodontic & TMJ Appliances</a>
+                        <a href="service-details.html?service=surgical-diagnostic" class="dropdown-item">Surgical & Diagnostic Tools</a>
+                        <a href="service-details.html?service=aesthetic-trial" class="dropdown-item">Aesthetic & Trial Aids</a>
+                        <a href="service-details.html?service=case-planning" class="dropdown-item">Case Planning Assistance</a>
+                        <a href="service-details.html?service=hybrid-denture" class="dropdown-item">Hybrid Denture Solutions</a>
                     </div>
+                    <a href="contact.html" class="nav-item nav-link d-lg-none">Contact Us</a>
                 </div>
             </div>
             <a href="contact.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
@@ -110,11 +130,11 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <p class="d-inline-block border rounded-pill py-1 px-4">About Us</p>
                     <h1 class="mb-4">Why You Should Trust Us? Get Know About Us!</h1>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                    <p><i class="far fa-check-circle text-primary me-3"></i>Quality health care</p>
-                    <p><i class="far fa-check-circle text-primary me-3"></i>Only Qualified Doctors</p>
-                    <p><i class="far fa-check-circle text-primary me-3"></i>Medical Research Professionals</p>
+                    <p>Founded by a dentist, for dentists. Dentarte seamlessly blends chairside insight with labside precision to deliver prostheses that mirror your clinical intent with lab-perfect execution.</p>
+                    <p class="mb-4">Our digital dental laboratory combines advanced technology with clinical expertise to provide comprehensive solutions for crowns, bridges, implants, and custom dental appliances. We understand the challenges dentists face and provide solutions that enhance patient outcomes.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Dentist-founded expertise</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Advanced digital technology</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Precision craftsmanship</p>
                     <a href="https://drive.google.com/uc?export=download&id=1UPmtP6JucIGj5oeGOvt-a0P3Q8wQUFPq" target="_blank" rel="noopener" class="btn btn-primary rounded-0 py-2 px-md-3 d-md-block">Download Catelog<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
             </div>
@@ -132,66 +152,82 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Crowns & Bridges</h4>
-                        <p class="mb-1">Zirconia Restorations</p>
-                        <p class="mb-1">PFM (Porcelain-Fused-to-Metal)</p>
-                        <p class="mb-1">E.max Lithium Disilicate</p>
-                    </div>
+                    <a href="service-details.html?service=crowns-bridges" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Crowns & Bridges</h4>
+                            <p class="mb-1">Zirconia Restorations</p>
+                            <p class="mb-1">PFM (Porcelain-Fused-to-Metal)</p>
+                            <p class="mb-1">E.max Lithium Disilicate</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Implant-Supported Prosthesis</h4>
-                        <p class="mb-1">Screw-Retained Implant Prosthesis</p>
-                        <p class="mb-1">Cement-Retained Implant Prosthesis</p>
-                        <p class="mb-1">Paulo Malo Prosthesis</p>
-                        <p class="mb-1">Metal-Free Implant Prosthesis</p>
-                        <p class="mb-1">Implant Temporaries</p>
-                    </div>
+                    <a href="service-details.html?service=implant-prosthesis" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Implant-Supported Prosthesis</h4>
+                            <p class="mb-1">Screw-Retained Implant Prosthesis</p>
+                            <p class="mb-1">Cement-Retained Implant Prosthesis</p>
+                            <p class="mb-1">Paulo Malo Prosthesis</p>
+                            <p class="mb-1">Metal-Free Implant Prosthesis</p>
+                            <p class="mb-1">Implant Temporaries</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Custom Abutments</h4>
-                        <p class="mb-1">Patient-specific abutments tailored for accuracy and fit</p>
-                    </div>
+                    <a href="service-details.html?service=custom-abutments" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Custom Abutments</h4>
+                            <p class="mb-1">Patient-specific abutments tailored for accuracy and fit</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Orthodontic & TMJ Appliances</h4>
-                        <p class="mb-1">Essix Retainers (Per Arch)</p>
-                        <p class="mb-1">Night Guards (Soft & Hard)</p>
-                        <p class="mb-1">Deprogrammer</p>
-                        <p class="mb-1">Kois Deprogrammer</p>
-                        <p class="mb-1">Lucia Jig</p>
-                    </div>
+                    <a href="service-details.html?service=orthodontic-tmj" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Orthodontic & TMJ Appliances</h4>
+                            <p class="mb-1">Essix Retainers (Per Arch)</p>
+                            <p class="mb-1">Night Guards (Soft & Hard)</p>
+                            <p class="mb-1">Deprogrammer</p>
+                            <p class="mb-1">Kois Deprogrammer</p>
+                            <p class="mb-1">Lucia Jig</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Surgical & Diagnostic Tools</h4>
-                        <p class="mb-1">Surgical Guides</p>
-                        <p class="mb-1">Digital Wax-Ups with Model Print</p>
-                        <p class="mb-1">3D Models (Half & Full Arch)</p>
-                    </div>
+                    <a href="service-details.html?service=surgical-diagnostic" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Surgical & Diagnostic Tools</h4>
+                            <p class="mb-1">Surgical Guides</p>
+                            <p class="mb-1">Digital Wax-Ups with Model Print</p>
+                            <p class="mb-1">3D Models (Half & Full Arch)</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Aesthetic & Trial Aids</h4>
-                        <p class="mb-1">PMMA Temporaries</p>
-                        <p class="mb-1">Wax Mockups</p>
-                        <p class="mb-1">Bleaching Trays</p>
-                    </div>
+                    <a href="service-details.html?service=aesthetic-trial" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Aesthetic & Trial Aids</h4>
+                            <p class="mb-1">PMMA Temporaries</p>
+                            <p class="mb-1">Wax Mockups</p>
+                            <p class="mb-1">Bleaching Trays</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Case Planning Assistance</h4>
-                        <p class="mb-1">Collaborative case planning support for complex prosthetic and implant cases because great outcomes start with smart planning.</p>
-                    </div>
+                    <a href="service-details.html?service=case-planning" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Case Planning Assistance</h4>
+                            <p class="mb-1">Collaborative case planning support for complex prosthetic and implant cases because great outcomes start with smart planning.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-4">
-                        <h4 class="mb-3">Hybrid Denture Solutions</h4>
-                        <p class="mb-1">Fixed-removable solutions for full-arch rehabilitation</p>
-                    </div>
+                    <a href="service-details.html?service=hybrid-denture" class="service-link">
+                        <div class="service-item bg-light rounded h-100 p-4">
+                            <h4 class="mb-3">Hybrid Denture Solutions</h4>
+                            <p class="mb-1">Fixed-removable solutions for full-arch rehabilitation</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -207,49 +243,49 @@
                     <div class="p-lg-5 ps-lg-0">
                         <p class="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
                         <h1 class="text-white mb-4">Why Choose Us</h1>
-                        <p class="text-white mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="text-white mb-4 pb-2">Choose Dentarte for unparalleled dental laboratory services that combine clinical expertise with cutting-edge technology. Our dentist-founded approach ensures every restoration meets the highest standards of precision and aesthetics.</p>
                         <div class="row g-4">
                             <div class="col-6 feature-item">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
-                                        <i class="fa fa-user-md text-primary"></i>
+                                        <i class="fa fa-graduation-cap text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="text-white mb-2">Experience</p>
-                                        <h5 class="text-white mb-0">Doctors</h5>
+                                        <p class="text-white mb-2">Clinical</p>
+                                        <h5 class="text-white mb-0">Expertise</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 feature-item">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
-                                        <i class="fa fa-check text-primary"></i>
+                                        <i class="fa fa-microchip text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="text-white mb-2">Quality</p>
-                                        <h5 class="text-white mb-0">Services</h5>
+                                        <p class="text-white mb-2">Digital</p>
+                                        <h5 class="text-white mb-0">Technology</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 feature-item">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
-                                        <i class="fa fa-comment-medical text-primary"></i>
+                                        <i class="fa fa-cogs text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="text-white mb-2">Positive</p>
-                                        <h5 class="text-white mb-0">Consultation</h5>
+                                        <p class="text-white mb-2">Precision</p>
+                                        <h5 class="text-white mb-0">Craftsmanship</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 feature-item">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
-                                        <i class="fa fa-headphones text-primary"></i>
+                                        <i class="fa fa-shipping-fast text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="text-white mb-2">24 Hours</p>
-                                        <h5 class="text-white mb-0">Support</h5>
+                                        <p class="text-white mb-2">Fast</p>
+                                        <h5 class="text-white mb-0">Delivery</h5>
                                     </div>
                                 </div>
                             </div>
@@ -319,8 +355,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQ</a>
+                    <a class="btn btn-link" href="">Terms & Conditions</a>
+                    <a class="btn btn-link" href="">FAQs</a>
                 </div>
             </div>
         </div>

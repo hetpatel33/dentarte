@@ -492,7 +492,17 @@
                 return;
             }
             
-            // Prepare form data
+            // START DOWNLOAD IMMEDIATELY (while still in user click context)
+            // This ensures mobile Safari sees it as a direct user action
+            window.open('https://drive.google.com/uc?export=download&id=1UPmtP6JucIGj5oeGOvt-a0P3Q8wQUFPq', '_blank', 'noopener');
+            
+            // Close modal immediately
+            const modal = bootstrap.Modal.getInstance(document.getElementById('catalogModal'));
+            if (modal) {
+                modal.hide();
+            }
+            
+            // Now send email in background
             const formData = {
                 from_name: document.getElementById('userName').value,
                 from_email: document.getElementById('userEmail').value,
@@ -502,54 +512,21 @@
                 timestamp: new Date().toLocaleString()
             };
             
-            // Send email via EmailJS
+            // Send email via EmailJS (in background)
             emailjs.send('service_pycwv2f', 'template_u9772j9', formData)
                 .then(function(response) {
                     console.log('Email sent successfully:', response);
-                    
-                    // Show success message
-                    document.getElementById('successAlert').classList.remove('d-none');
-                    
-                    // Reset form
-                    document.getElementById('catalogForm').reset();
-                    document.getElementById('catalogForm').classList.remove('was-validated');
-                    
-                    // Start download after 2 seconds
-                    setTimeout(function() {
-                        // Create download link and trigger it
-                        const downloadLink = document.createElement('a');
-                        downloadLink.href = 'https://drive.google.com/uc?export=download&id=1UPmtP6JucIGj5oeGOvt-a0P3Q8wQUFPq';
-                        downloadLink.target = '_blank';
-                        downloadLink.rel = 'noopener';
-                        document.body.appendChild(downloadLink);
-                        downloadLink.click();
-                        document.body.removeChild(downloadLink);
-                        
-                        // Close modal after another 2 seconds
-                        setTimeout(function() {
-                            const modal = bootstrap.Modal.getInstance(document.getElementById('catalogModal'));
-                            modal.hide();
-                        }, 2000);
-                    }, 2000);
-                    
-                    resetButton();
+                    // Email sent successfully, but user already has their download
                 })
                 .catch(function(error) {
                     console.error('Email sending failed:', error);
-                    
-                    // Show error message
-                    const errorAlert = document.getElementById('errorAlert');
-                    const errorMessage = document.getElementById('errorMessage');
-                    
-                    if (error.status === 412) {
-                        errorMessage.textContent = 'Email service authentication issue. Please contact us directly at dentarte201@gmail.com';
-                    } else {
-                        errorMessage.textContent = 'Failed to send your information. Please try again or contact us directly.';
-                    }
-                    
-                    errorAlert.classList.remove('d-none');
-                    resetButton();
+                    // Download already started, so just log the email error
                 });
+                
+            // Reset form and button
+            document.getElementById('catalogForm').reset();
+            document.getElementById('catalogForm').classList.remove('was-validated');
+            resetButton();
                 
             function resetButton() {
                 btnText.classList.remove('d-none');
